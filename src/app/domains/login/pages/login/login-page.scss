@@ -1,0 +1,74 @@
+@import 'src/variables.scss';
+
+.login-page__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-page__img {
+  flex: 0.65;
+  height: 100vh;
+
+  img {
+    width: 100%;
+    height: inherit;
+  }
+}
+
+.login-page__login {
+  flex: 0.35;
+  padding: 0 $spacing * 2;
+
+  .login-page__login-wrapper {
+    padding: 0 $spacing * 6;
+  }
+}
+
+.login-page__title {
+  font-family: 'Roboto', sans-serif;
+  color: $black;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: $spacing * 2;
+
+  label {
+    font-size: $text-s-font-size;
+    color: $black;
+    margin-bottom: $spacing/4;
+  }
+
+  input {
+    cursor: pointer;
+    height: $spacing / 2;
+    padding: $spacing;
+    background-color: transparent;
+    border: 1px solid $blue;
+    border-radius: 3px;
+  }
+}
+
+.submit {
+  background-color: $blue;
+  height: 2rem;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 4px;
+  color: $white;
+  text-transform: uppercase;
+  font-size: $text-s-font-size;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.login-page__error-feedback {
+  margin-top: $spacing;
+  color: $black;
+  font-size: $text-s-font-size;
+}

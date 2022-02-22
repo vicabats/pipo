@@ -1,0 +1,23 @@
+{
+    "users": [
+        {
+            "name": "Acme Co",
+            "email": "ameco@email.com",
+            "password": "1234",
+            "plans": [
+                "Norte Europa",
+                "Dental Sorriso"
+            ]
+        },
+        {
+            "name": "Tio Patinhas Bank",
+            "email": "tiopatinhasbank@email.com",
+            "password": "4321",
+            "plans": [
+                "Pampulha Intermédica",
+                "Dental Sorriso",
+                "Mente Sã, Corpo São"
+            ]
+        }
+    ]
+}

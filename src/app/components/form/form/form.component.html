@@ -1,0 +1,17 @@
+<section class="form-wrapper">
+  <div>
+    <div class="plan-options">
+      <ng-container *ngFor="let plan of planOptions">
+        <div class="option">
+          <input type="checkbox" value="plan" name="plan">
+          <label>{{plan.name}}</label>
+        </div>
+      </ng-container>
+    </div>
+    <form>
+      <input type="text"> Nome:
+      <input type="number"> CPF:
+      <button type="submit">Enviar cadastro</button>
+    </form>
+  </div>
+</section>
