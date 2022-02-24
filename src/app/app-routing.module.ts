@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    loadChildren: () => import('./pages/register-page/register-page.module')
+    loadChildren: () => import('./domains/registration/pages/register-page/register-page.module')
       .then(m => m.RegisterPageModule)
   }
 ];

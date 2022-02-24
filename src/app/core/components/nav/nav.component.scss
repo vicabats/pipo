@@ -1,0 +1,9 @@
+@import "src/variables.scss";
+
+.nav__container {
+  padding: $spacing;
+}
+
+.nav__logo {
+  cursor: pointer;
+}

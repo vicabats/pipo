@@ -1,0 +1,18 @@
+<section class="form__container">
+  <div class="form__plans-wrapper">
+    <ng-container *ngFor="let plan of availablePlans; let i = index">
+      <div class="form__plan">
+        <input type="checkbox" value="plan" name="plan" (click)="setSelectedPlan(plan, i)">
+        <label>{{plan}}</label>
+      </div>
+    </ng-container>
+  </div>
+
+  <ng-container *ngIf="requestedInfos">
+    <form>
+      <div *ngFor="let attribute of requestedInfos | keyvalue">
+        <input type={{attribute.value}} required> {{attribute.key}}
+      </div>
+    </form>
+  </ng-container>
+</section>

@@ -1,0 +1,14 @@
+<section *ngIf="user" class="register-page__container">
+  <h1 class="register-page__header">Olá, {{user.name}}!</h1>
+  <h2 class="register-page__subtitle">Tudo pronto para cadastrar seu novo colaborador?</h2>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Selecione o benefício
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-form [availablePlans]="user.plans"></app-form>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { RegisterPage } from './register-page';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { FormModule } from 'src/app/components/form/form/form.module';
+import { FormModule } from 'src/app/domains/registration/components/form/form.module';
 
 @NgModule({
   declarations: [
