@@ -1,22 +1,23 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { planInitializer, PlanName } from 'src/app/domains/registration/models/plans';
+import { Plan } from '../../models/Plan';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
 
-  constructor() { }
+  constructor(
+
+  ) { }
 
   @Input() availablePlans: PlanName[] = []
 
   public selectedPlans: PlanName[] = []
   public requestedInfos: any[] = []
-
-  ngOnInit(): void {
-  }
 
   public setSelectedPlan(currentSelectedPlan: PlanName, index: number) {
     this.selectedPlans.includes(currentSelectedPlan) ?

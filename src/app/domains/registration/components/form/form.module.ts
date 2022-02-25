@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormComponent } from './form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InputTranslatePipe } from '../../pipes/input-translate.pipe';
 
 @NgModule({
   declarations: [
-    FormComponent
+    FormComponent,
+    InputTranslatePipe,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
   ],
-  exports: [FormComponent]
+  exports: [FormComponent],
 })
 export class FormModule { }

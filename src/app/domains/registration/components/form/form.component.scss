@@ -1,4 +1,5 @@
 @import "src/variables.scss";
+@import "src/styles.scss";
 
 .form__plans-wrapper {
   display: flex;
@@ -12,13 +13,48 @@
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   font-size: $text-m-font-size;
+  cursor: pointer;
 
   input {
     margin-right: $spacing / 4;
     cursor: pointer;
   }
+
+  label {
+    cursor: pointer;
+  }
+}
+
+form {
+  margin-top: calc($spacing * 2);
+
+  .form__inputs-wrapper + .form__inputs-wrapper {
+    margin-top: $spacing;
+  }
+}
+
+.form__inputs-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__plan + .form__plan {
   padding-left: $spacing * 2;
+}
+
+.form__label {
+  font-size: $text-m-font-size;
+  font-weight: $font-weight-bold;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: calc($spacing / 2);
+}
+
+.form__input {
+  border: 1px $black solid;
+  border-radius: $border-radius;
+  height: calc($spacing * 2);
+}
+
+.form__submit {
+  margin-top: calc($spacing * 2);
 }

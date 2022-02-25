@@ -1,8 +1,8 @@
 <section class="form__container">
   <div class="form__plans-wrapper">
     <ng-container *ngFor="let plan of availablePlans; let i = index">
-      <div class="form__plan">
-        <input type="checkbox" value="plan" name="plan" (click)="setSelectedPlan(plan, i)">
+      <div class="form__plan" (click)="setSelectedPlan(plan, i)">
+        <input type="checkbox" value="plan" name="plan">
         <label>{{plan}}</label>
       </div>
     </ng-container>
@@ -10,9 +10,11 @@
 
   <ng-container *ngIf="requestedInfos">
     <form>
-      <div *ngFor="let attribute of requestedInfos | keyvalue">
-        <input type={{attribute.value}} required> {{attribute.key}}
+      <div class="form__inputs-wrapper" *ngFor="let attribute of requestedInfos | keyvalue">
+        <label class="form__label">{{attribute.key | inputTranslate}}</label>
+        <input class="form__input" type={{attribute.value}} required>
       </div>
+      <button class="default-button form__submit" type="submit">Cadastrar</button>
     </form>
   </ng-container>
 </section>
