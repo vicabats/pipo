@@ -21,22 +21,22 @@ export enum PlanName {
 export const planInitializer = {
   [PlanName.NorteEuropa]: {
     initializer() {
-      return new Plan.Builder(undefined).setName(undefined).setAdmissionDate(undefined).setEmail(undefined)
+      return new Plan.Builder('').setName('').setAdmissionDate(new Date()).setEmail('')
     }
   },
   [PlanName.DentalSorriso]: {
     initializer() {
-      return new Plan.Builder(undefined).setName(undefined).setWeight(undefined).setHeight(undefined)
+      return new Plan.Builder('').setName('').setWeight(0).setHeight(0)
     }
   },
   [PlanName.MenteSaCorpoSao]: {
     initializer() {
-      return new Plan.Builder(undefined).setHours(undefined)
+      return new Plan.Builder('').setHours(0)
     }
   },
   [PlanName.PampulhaIntermedica]: {
     initializer() {
-      return new Plan.Builder(undefined).setName(undefined).setAdmissionDate(undefined).setAddress(undefined)
+      return new Plan.Builder('').setName('').setAdmissionDate(new Date()).setAddress('')
     }
   },
 }

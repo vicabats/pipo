@@ -1,55 +1,55 @@
 export class Plan {
-  cpf: string | undefined;
+  cpf: string;
 
-  constructor(cpf: string | undefined) {
+  constructor(cpf: string) {
     this.cpf = cpf;
   }
 
   static Builder = class {
-    private cpf: string | undefined;
-    private name: string | undefined;
-    private admission_date: Date | undefined;
-    private email: string | undefined;
-    private weight: number | undefined;
-    private height: number | undefined;
-    private hours: number | undefined;
-    private address: string | undefined;
+    private cpf: string;
+    private name: string;
+    private admission_date: Date;
+    private email: string;
+    private weight: number;
+    private height: number;
+    private hours: number;
+    private address: string;
 
-    constructor(cpf: string | undefined) {
+    constructor(cpf: string) {
       this.cpf = cpf;
     }
 
-    setName(name: string | undefined) {
+    setName(name: string) {
       this.name = name;
       return this;
     }
 
-    setAdmissionDate(admission_date: Date | undefined) {
+    setAdmissionDate(admission_date: Date) {
       this.admission_date = admission_date;
       return this;
     }
 
-    setEmail(email: string | undefined) {
+    setEmail(email: string) {
       this.email = email;
       return this;
     }
 
-    setWeight(weight: number | undefined) {
+    setWeight(weight: number) {
       this.weight = weight;
       return this;
     }
 
-    setHeight(height: number | undefined) {
+    setHeight(height: number) {
       this.height = height;
       return this;
     }
 
-    setHours(hours: number | undefined) {
+    setHours(hours: number) {
       this.hours = hours;
       return this;
     }
 
-    setAddress(address: string | undefined) {
+    setAddress(address: string) {
       this.address = address;
       return this;
     }

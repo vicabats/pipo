@@ -1,7 +1,7 @@
 @import 'src/variables.scss';
 
 .register-page__container {
-  padding: calc($spacing * 20);
+  padding: $spacing * 20 $spacing * 35;
 }
 
 .register-page__header {

@@ -23,7 +23,7 @@ export class FormComponent {
   public selectedPlans: PlanName[] = []
   public registerForm: FormGroup = new FormGroup({});
 
-  public submitFeedback: string = undefined;
+  public submitFeedback: string = '';
 
   private setFormInputs() {
     const registrationData = this.formService.setRegistrationDataObject(this.selectedPlans)

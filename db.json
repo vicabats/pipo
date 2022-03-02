@@ -86,6 +86,19 @@
         "Norte Europa"
       ],
       "id": 5
+    },
+    {
+      "companyId": 1,
+      "employee": {
+        "cpf": "434.250.428-66",
+        "name": "Vitória",
+        "admission_date": "2022-03-19",
+        "email": "vitoria_batistoti@hotmail.com"
+      },
+      "plans": [
+        "Norte Europa"
+      ],
+      "id": 6
     }
   ]
 }

@@ -12,7 +12,7 @@
     <form [formGroup]="registerForm">
       <div class="form__inputs-wrapper" *ngFor="let attribute of registerForm.controls | keyvalue">
         <label class="form__label">{{attribute.key | inputTranslate}}</label>
-        <input class="form__input" type={{attribute.value}} formControlName={{attribute.key}}>
+        <input [type]="attribute.key | inputType" class="form__input" formControlName={{attribute.key}}>
       </div>
       <button class="default-button form__submit" type="submit" [disabled]="!registerForm.valid" (click)="onSubmit()">Cadastrar</button>
     </form>

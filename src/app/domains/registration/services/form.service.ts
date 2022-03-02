@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { planInitializer, PlanName } from '../models/plans';
 import { UserRegistrationRequest } from '../models/Registration';
 
@@ -25,13 +24,5 @@ export class FormService {
     return this.httpClient.post<UserRegistrationRequest>(`${this.putRegistrationUrl}`, registration, {
       headers: { 'Content-Type': 'application/json' }
     })
-  }
-
-  public setInputValidation(value: any): ValidatorFn {
-    console.log(typeof value)
-
-    return (control: AbstractControl): ValidationErrors | null => {
-      return value ? { forbiddenName: { value: control.value } } : null;
-    };
   }
 }
