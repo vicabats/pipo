@@ -34,16 +34,19 @@ export class FormComponent {
     }
   }
 
-  public setSelectedPlan(currentSelectedPlan: PlanName, index: number) {
-    this.selectedPlans.includes(currentSelectedPlan) ?
-      this.selectedPlans.splice(index, 1) : this.selectedPlans.push(currentSelectedPlan);
+  public onPlanSelected(currentSelectedPlan: PlanName) {
+    this.selectedPlans = this.setSelectedPlans(currentSelectedPlan)
     this.setFormInputs();
+  }
+
+  private setSelectedPlans(currentSelectedPlan: PlanName) {
+    return this.selectedPlans.includes(currentSelectedPlan) ? this.selectedPlans.filter(i => i !== currentSelectedPlan) : [...this.selectedPlans, currentSelectedPlan];
   }
 
   public onSubmit() {
     this.submitFeedback = '';
     const loggedUserId = this.loggedUser?.id.toString()
-    this.formService.registerUser(loggedUserId, this.setRegistrationObject()).subscribe(
+    this.formService.registerUser(this.setRegistrationObject()).subscribe(
       () => this.handleSubmitSuccess(),
       () => this.handleSubmitFailed()
     )

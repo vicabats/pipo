@@ -21,7 +21,7 @@ export enum PlanName {
 export const planInitializer = {
   [PlanName.NorteEuropa]: {
     initializer() {
-      return new Plan.Builder('').setName('').setAdmissionDate(new Date()).setEmail('')
+      return new Plan.Builder('').setName('').setAdmissionDate(undefined).setEmail('')
     }
   },
   [PlanName.DentalSorriso]: {
@@ -36,7 +36,7 @@ export const planInitializer = {
   },
   [PlanName.PampulhaIntermedica]: {
     initializer() {
-      return new Plan.Builder('').setName('').setAdmissionDate(new Date()).setAddress('')
+      return new Plan.Builder('').setName('').setAdmissionDate(undefined).setAddress('')
     }
   },
 }

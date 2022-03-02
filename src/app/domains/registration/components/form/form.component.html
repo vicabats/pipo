@@ -1,14 +1,14 @@
 <section class="form__container">
   <div class="form__plans-wrapper">
-    <ng-container *ngFor="let plan of availablePlans; let i = index">
+    <ng-container *ngFor="let plan of availablePlans">
       <div class="form__plan">
-        <input type="checkbox" value="plan" name="plan" (click)="setSelectedPlan(plan, i)">
+        <input type="checkbox" value="plan" name="plan" (click)="onPlanSelected(plan)">
         <label>{{plan}}</label>
       </div>
     </ng-container>
   </div>
 
-  <ng-container *ngIf="selectedPlans.length">
+  <ng-container *ngIf="selectedPlans.length >= 1">
     <form [formGroup]="registerForm">
       <div class="form__inputs-wrapper" *ngFor="let attribute of registerForm.controls | keyvalue">
         <label class="form__label">{{attribute.key | inputTranslate}}</label>

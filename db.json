@@ -24,81 +24,30 @@
   ],
   "registers": [
     {
-      "id": 1,
+      "companyId": 1,
       "employee": {
-        "cpf": "wfwef",
-        "name": "wefwef",
-        "admission_date": "wefwf",
-        "email": "wfwef",
-        "plans": [
-          "Norte Europa"
-        ]
-      }
+        "cpf": "123.456.789-00",
+        "name": "João Silva",
+        "admission_date": "2022-03-18",
+        "email": "joaosilva@email.com"
+      },
+      "plans": [
+        "Norte Europa"
+      ],
+      "id": 1
     },
     {
       "companyId": 1,
       "employee": {
-        "cpf": "werwe",
-        "name": "werer",
-        "admission_date": "wer",
-        "email": "wer"
+        "cpf": "123.456.789-00",
+        "name": "Teste",
+        "admission_date": "2022-03-25",
+        "email": "teste@email.com"
       },
       "plans": [
         "Norte Europa"
       ],
       "id": 2
-    },
-    {
-      "companyId": 1,
-      "employee": {
-        "cpf": "wer",
-        "name": "werwer",
-        "admission_date": "wre",
-        "email": "wrwe"
-      },
-      "plans": [
-        "Norte Europa"
-      ],
-      "id": 3
-    },
-    {
-      "companyId": 1,
-      "employee": {
-        "cpf": "sdfs",
-        "name": "sdf",
-        "admission_date": "dsf",
-        "email": "sdfsd"
-      },
-      "plans": [
-        "Norte Europa"
-      ],
-      "id": 4
-    },
-    {
-      "companyId": 1,
-      "employee": {
-        "cpf": "werwe",
-        "name": "erwe",
-        "admission_date": "werwer",
-        "email": "werw"
-      },
-      "plans": [
-        "Norte Europa"
-      ],
-      "id": 5
-    },
-    {
-      "companyId": 1,
-      "employee": {
-        "cpf": "434.250.428-66",
-        "name": "Vitória",
-        "admission_date": "2022-03-19",
-        "email": "vitoria_batistoti@hotmail.com"
-      },
-      "plans": [
-        "Norte Europa"
-      ],
-      "id": 6
     }
   ]
 }

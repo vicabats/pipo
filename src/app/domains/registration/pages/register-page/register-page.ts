@@ -19,17 +19,17 @@ export class RegisterPage implements OnInit {
   public user = {} as User;
 
   ngOnInit(): void {
-    // this.sessionService.getUserSession().subscribe(loggedUser => {
-    //   if (Object.keys(loggedUser).length === 0) { this.redirectToLogin(); }
-    //   this.user = loggedUser;
-    // })
-    this.user = {
-      name: 'Acme Co',
-      id: 1,
-      email: '',
-      password: '',
-      plans: [PlanName.NorteEuropa, PlanName.DentalSorriso]
-    }
+    this.sessionService.getUserSession().subscribe(loggedUser => {
+      if (Object.keys(loggedUser).length === 0) { this.redirectToLogin(); }
+      this.user = loggedUser;
+    })
+    // this.user = {
+    //   name: 'Acme Co',
+    //   id: 1,
+    //   email: '',
+    //   password: '',
+    //   plans: [PlanName.NorteEuropa, PlanName.DentalSorriso]
+    // }
   }
 
   private redirectToLogin() {

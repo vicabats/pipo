@@ -20,7 +20,7 @@ export class FormService {
     return Object.assign({}, ...neededInputs)
   }
 
-  public registerUser(userId: string, registration: UserRegistrationRequest) {
+  public registerUser(registration: UserRegistrationRequest) {
     return this.httpClient.post<UserRegistrationRequest>(`${this.putRegistrationUrl}`, registration, {
       headers: { 'Content-Type': 'application/json' }
     })
