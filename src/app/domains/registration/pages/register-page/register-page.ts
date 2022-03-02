@@ -25,6 +25,7 @@ export class RegisterPage implements OnInit {
     // })
     this.user = {
       name: 'Acme Co',
+      id: 1,
       email: '',
       password: '',
       plans: [PlanName.NorteEuropa, PlanName.DentalSorriso]

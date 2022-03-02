@@ -1,20 +1,21 @@
 <section class="form__container">
   <div class="form__plans-wrapper">
     <ng-container *ngFor="let plan of availablePlans; let i = index">
-      <div class="form__plan" (click)="setSelectedPlan(plan, i)">
-        <input type="checkbox" value="plan" name="plan">
+      <div class="form__plan">
+        <input type="checkbox" value="plan" name="plan" (click)="setSelectedPlan(plan, i)">
         <label>{{plan}}</label>
       </div>
     </ng-container>
   </div>
 
-  <ng-container *ngIf="requestedInfos">
-    <form>
-      <div class="form__inputs-wrapper" *ngFor="let attribute of requestedInfos | keyvalue">
+  <ng-container *ngIf="selectedPlans.length">
+    <form [formGroup]="registerForm">
+      <div class="form__inputs-wrapper" *ngFor="let attribute of registerForm.controls | keyvalue">
         <label class="form__label">{{attribute.key | inputTranslate}}</label>
-        <input class="form__input" type={{attribute.value}} required>
+        <input class="form__input" type={{attribute.value}} formControlName={{attribute.key}}>
       </div>
-      <button class="default-button form__submit" type="submit">Cadastrar</button>
+      <button class="default-button form__submit" type="submit" [disabled]="!registerForm.valid" (click)="onSubmit()">Cadastrar</button>
     </form>
+    <p *ngIf="submitFeedback" class="form__feedback">O cadastro foi efetuado com sucesso :-)</p>
   </ng-container>
 </section>

@@ -11,7 +11,7 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient) { }
 
-  private getUser = `http://localhost:3000/users?email=userEmail`
+  private getUserUrl = `http://localhost:3000/users?email=userEmail`
 
   public login(currentUser: User): Observable<User> {
     return this.getUserCredentials(currentUser).pipe(
@@ -20,7 +20,7 @@ export class LoginService {
   }
 
   private getUserCredentials(currentUser: User) {
-    return this.httpClient.get<any>(`${this.getUser}`.replace('userEmail', currentUser.email))
+    return this.httpClient.get<User>(`${this.getUserUrl}`.replace('userEmail', currentUser.email))
   }
 
   private isUserAuthentic(authenticUser: User, currentUser: User): Observable<User> {

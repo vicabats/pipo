@@ -8,7 +8,7 @@
           Selecione o benefício
         </mat-panel-title>
       </mat-expansion-panel-header>
-      <app-form [availablePlans]="user.plans"></app-form>
+      <app-form [availablePlans]="user.plans" [loggedUser]="user"></app-form>
     </mat-expansion-panel>
   </mat-accordion>
 </section>

@@ -1,23 +1,91 @@
 {
-    "users": [
-        {
-            "name": "Acme Co",
-            "email": "ameco@email.com",
-            "password": "1234",
-            "plans": [
-                "Norte Europa",
-                "Dental Sorriso"
-            ]
-        },
-        {
-            "name": "Tio Patinhas Bank",
-            "email": "tiopatinhasbank@email.com",
-            "password": "4321",
-            "plans": [
-                "Pampulha Intermédica",
-                "Dental Sorriso",
-                "Mente Sã, Corpo São"
-            ]
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Acme Co",
+      "email": "ameco@email.com",
+      "password": "1234",
+      "plans": [
+        "Norte Europa",
+        "Dental Sorriso"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Tio Patinhas Bank",
+      "email": "tiopatinhasbank@email.com",
+      "password": "4321",
+      "plans": [
+        "Pampulha Intermédica",
+        "Dental Sorriso",
+        "Mente Sã, Corpo São"
+      ]
+    }
+  ],
+  "registers": [
+    {
+      "id": 1,
+      "employee": {
+        "cpf": "wfwef",
+        "name": "wefwef",
+        "admission_date": "wefwf",
+        "email": "wfwef",
+        "plans": [
+          "Norte Europa"
+        ]
+      }
+    },
+    {
+      "companyId": 1,
+      "employee": {
+        "cpf": "werwe",
+        "name": "werer",
+        "admission_date": "wer",
+        "email": "wer"
+      },
+      "plans": [
+        "Norte Europa"
+      ],
+      "id": 2
+    },
+    {
+      "companyId": 1,
+      "employee": {
+        "cpf": "wer",
+        "name": "werwer",
+        "admission_date": "wre",
+        "email": "wrwe"
+      },
+      "plans": [
+        "Norte Europa"
+      ],
+      "id": 3
+    },
+    {
+      "companyId": 1,
+      "employee": {
+        "cpf": "sdfs",
+        "name": "sdf",
+        "admission_date": "dsf",
+        "email": "sdfsd"
+      },
+      "plans": [
+        "Norte Europa"
+      ],
+      "id": 4
+    },
+    {
+      "companyId": 1,
+      "employee": {
+        "cpf": "werwe",
+        "name": "erwe",
+        "admission_date": "werwer",
+        "email": "werw"
+      },
+      "plans": [
+        "Norte Europa"
+      ],
+      "id": 5
+    }
+  ]
 }

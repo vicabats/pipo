@@ -1,6 +1,9 @@
+import { PlanName } from "../../registration/models/plans";
+
 export interface User {
-  name: string;
+  id: number;
+  name?: string;
   email: string;
   password: string;
-  plans: any[]
+  plans?: PlanName[] | undefined;
 }

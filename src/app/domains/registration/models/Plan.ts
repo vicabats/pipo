@@ -1,12 +1,5 @@
 export class Plan {
-  private cpf: string | undefined;
-  // private name: string | undefined;
-  // private admission_date: Date | undefined;
-  // private email: string | undefined;
-  // private weight: number | undefined;
-  // private height: number | undefined;
-  // private hours: number | undefined;
-  // private address: string | undefined;
+  cpf: string | undefined;
 
   constructor(cpf: string | undefined) {
     this.cpf = cpf;

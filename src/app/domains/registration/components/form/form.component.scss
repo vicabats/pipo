@@ -14,10 +14,13 @@
   font-family: 'Poppins', sans-serif;
   font-size: $text-m-font-size;
   cursor: pointer;
+  flex: 0.5;
 
   input {
-    margin-right: $spacing / 4;
+    margin-right: calc($spacing / 4);
     cursor: pointer;
+    width: calc($spacing * 1.5) ;
+    height: calc($spacing * 1.5);
   }
 
   label {
@@ -38,10 +41,6 @@ form {
   flex-direction: column;
 }
 
-.form__plan + .form__plan {
-  padding-left: $spacing * 2;
-}
-
 .form__label {
   font-size: $text-m-font-size;
   font-weight: $font-weight-bold;
@@ -57,4 +56,10 @@ form {
 
 .form__submit {
   margin-top: calc($spacing * 2);
+}
+
+.form__feedback {
+  color: $black;
+  font-weight: $font-weight-bolder;
+  text-align: center;
 }

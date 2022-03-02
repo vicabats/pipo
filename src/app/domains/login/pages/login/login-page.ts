@@ -36,12 +36,8 @@ export class LoginPage implements OnDestroy {
     const userInfos: User = this.loginForm?.value
     this.subscriptions.push(
       this.loginService.login(userInfos).subscribe(
-        (loggedUser: User) => {
-          this.handleLoginSuccess(loggedUser);
-        },
-        () => {
-          this.handleLoginFailed()
-        }
+        (loggedUser: User) => this.handleLoginSuccess(loggedUser),
+        () => this.handleLoginFailed()
       )
     )
   }

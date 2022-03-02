@@ -1,5 +1,16 @@
 import { Plan } from "./Plan";
 
+export interface PlanInterface {
+  cpf: string
+  name?: string
+  admission_date?: Date
+  email?: string
+  weight?: number
+  height?: number
+  hours?: number
+  address?: string
+}
+
 export enum PlanName {
   NorteEuropa = 'Norte Europa',
   DentalSorriso = 'Dental Sorriso',
