@@ -1,27 +1,35 @@
 # TestePipo
+Olá!
+O projeto foi desenvolvido utilizando Angular, TypeScript, SASS e Json Server para mockar requests REST. Como adicional, foi utilizada a lib Angular Material para criar um componente de dropdown.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+O projeto consiste, basicamente, em dois domínios: o de Login e o de Registration. Sua estrutura de pastas está dividida nesses dois domínios. 
 
-## Development server
+## Como rodar o projeto
+Baixe o projeto e posteriormente rode `npm i` para instalar as dependências. Depois, `ng serve`. Em outra aba do terminal, rode `json-server db.json` para subir o server. Por default, ele irá abrir na porta 3000. Se possível, mantenha nessa porta, pois, caso contrário, os requests irão falhar. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Para navegar pelo projeto
+É necessário que o usuário esteja logado como um cliente válido (Acme Co ou Tio Patinhas Bank) para conseguir ter acesso à tela de cadastro de novos colaboradores.
 
-## Code scaffolding
+Para o login, faça uso de alguma dessas credenciais:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+      email: ameco@email.com
+      password: 1234
 
-## Build
+      email: tiopatinhasbank@email.com
+      password: 4321
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##  Organização do banco de dados (JSON Server)
+Utilizei o JSON Server para mockar o server side. Ele cumpre alguns papéis, mas, devido a algumas limitações, não pude organizar os dados da forma como realmente gostaria. Por exemplo, criei dois domínios no arquivo `json.db`: o de `users` (referente à experiência de Login) e o de `registers` (referente à experiência de Registration).
 
-## Running unit tests
+## Testes unitários
+O comando `ng test` irá rodar os testes unitários do projeto. Infelizmente, não consegui desenvolver muitos testes devido ao tempo. Gostaria de ter podido cobrido melhor os métodos dos serviços. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Extras
+- No domínio de `registers`, seria muito mais interessante que existisse uma entidade representando cada cliente (Acme Co e Tio Patinhas Bank, por exemplo), e que cada entidade pudesse ter seus vários funcionários cadastrados. Uma relação de 1: N. Porém, o JSON Server não está preparado para "nested routes", por isso, a solução que encontrei foi colocar a refência do cliente dentro do objeto de registro do usuário.
+- Quando comecei a desenvolver o teste, imaginei que a melhor forma de criar um formulário que fosse moldável às necessidades de cada combinação possível de cadastro de cliente fosse criando um Builder. Acho que a abordagem me rendeu economizar em criar diversos inputs na View, mas trouxe alguns pontos que gostaria de ter pensado em soluções melhores, como: máscaras específicas para cada tipo de input e que cada input soubesse seu type, sem ser necessário criar a pipe InputType que criei para converter o problema de inputs com tipos diferentes.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+No mais, é isso.
+Obrigada pela oportunidade :D
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
