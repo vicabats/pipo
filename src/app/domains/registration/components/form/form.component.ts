@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/domains/login/models/User';
 import { PlanName } from 'src/app/domains/registration/models/plans';
-import { UserRegistrationRequest } from '../../models/Registration';
+import { UserRegistrationRequest } from '../../models/registration';
 import { FormService } from '../../services/form.service';
 
 @Component({
@@ -45,7 +45,6 @@ export class FormComponent {
 
   public onSubmit() {
     this.submitFeedback = '';
-    const loggedUserId = this.loggedUser?.id.toString()
     this.formService.registerUser(this.setRegistrationObject()).subscribe(
       () => this.handleSubmitSuccess(),
       () => this.handleSubmitFailed()

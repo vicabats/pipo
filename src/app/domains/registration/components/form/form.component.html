@@ -9,7 +9,7 @@
   </div>
 
   <ng-container *ngIf="selectedPlans.length >= 1">
-    <form [formGroup]="registerForm">
+    <form [formGroup]="registerForm" class="form__collapse">
       <div class="form__inputs-wrapper" *ngFor="let attribute of registerForm.controls | keyvalue">
         <label class="form__label">{{attribute.key | inputTranslate}}</label>
         <input [type]="attribute.key | inputType" class="form__input" formControlName={{attribute.key}}>

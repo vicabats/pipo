@@ -8,7 +8,7 @@ export class Plan {
   static Builder = class {
     private cpf: string;
     private name: string;
-    private admission_date: Date;
+    private admission_date: string;
     private email: string;
     private weight: number;
     private height: number;
@@ -24,7 +24,7 @@ export class Plan {
       return this;
     }
 
-    setAdmissionDate(admission_date: Date) {
+    setAdmissionDate(admission_date: string) {
       this.admission_date = admission_date;
       return this;
     }

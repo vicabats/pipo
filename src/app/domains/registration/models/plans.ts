@@ -3,7 +3,7 @@ import { Plan } from "./Plan";
 export interface PlanInterface {
   cpf: string
   name?: string
-  admission_date?: Date
+  admission_date?: string
   email?: string
   weight?: number
   height?: number
@@ -21,7 +21,7 @@ export enum PlanName {
 export const planInitializer = {
   [PlanName.NorteEuropa]: {
     initializer() {
-      return new Plan.Builder('').setName('').setAdmissionDate(undefined).setEmail('')
+      return new Plan.Builder('').setName('').setAdmissionDate('').setEmail('')
     }
   },
   [PlanName.DentalSorriso]: {
@@ -36,7 +36,7 @@ export const planInitializer = {
   },
   [PlanName.PampulhaIntermedica]: {
     initializer() {
-      return new Plan.Builder('').setName('').setAdmissionDate(undefined).setAddress('')
+      return new Plan.Builder('').setName('').setAdmissionDate('').setAddress('')
     }
   },
 }

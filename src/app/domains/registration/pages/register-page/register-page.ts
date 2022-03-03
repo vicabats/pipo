@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SessionService } from 'src/app/core/services/session.service';
 import { User } from 'src/app/domains/login/models/User';
-import { PlanName } from 'src/app/domains/registration/models/plans';
 
 @Component({
   selector: 'app-register-page',
@@ -23,16 +22,9 @@ export class RegisterPage implements OnInit {
       if (Object.keys(loggedUser).length === 0) { this.redirectToLogin(); }
       this.user = loggedUser;
     })
-    // this.user = {
-    //   name: 'Acme Co',
-    //   id: 1,
-    //   email: '',
-    //   password: '',
-    //   plans: [PlanName.NorteEuropa, PlanName.DentalSorriso]
-    // }
   }
 
-  private redirectToLogin() {
+  redirectToLogin() {
     this.router.navigate(['/']);
   }
 }

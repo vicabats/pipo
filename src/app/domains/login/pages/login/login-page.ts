@@ -24,7 +24,6 @@ export class LoginPage implements OnDestroy {
     email: '',
     password: ''
   });
-  public user = {} as User;
   public errorFeedback: boolean = false;
   private subscriptions: Subscription[] = [];
 

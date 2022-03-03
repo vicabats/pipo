@@ -15,5 +15,4 @@ export class NavComponent {
   public redirectToLogin() {
     this.router.navigate(['/']);
   }
-
 }
