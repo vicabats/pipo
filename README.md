@@ -24,12 +24,11 @@ Utilizei o JSON Server para mockar o server side. Ele cumpre alguns papéis, mas
 No domínio de `registers`, seria muito mais interessante que existisse uma entidade representando cada cliente (Acme Co e Tio Patinhas Bank, por exemplo), e que cada entidade pudesse ter seus vários funcionários cadastrados. Uma relação de 1: N. Porém, o JSON Server não está preparado para "nested routes", por isso, a solução que encontrei foi colocar a referência do cliente (`companyId`) dentro do objeto de registro do usuário.
 
 ## Testes unitários
-O comando `ng test` irá rodar os testes unitários do projeto. Infelizmente, não consegui desenvolver muitos testes devido ao tempo. Gostaria de ter podido cobrido melhor os métodos dos serviços. 
+O comando `ng test` irá rodar os testes unitários do projeto. Gostaria de ter podido cobrido melhor os métodos dos serviços. 
 
 
-## Extras
-
-- Quando comecei a desenvolver o teste, imaginei que a melhor forma de criar um formulário que fosse moldável às necessidades de cada combinação possível de cadastro de cliente fosse criando um Builder. Acho que a abordagem me rendeu economizar em criar diversos inputs na View, mas trouxe alguns pontos que gostaria de ter pensado em soluções melhores, como: máscaras específicas para cada tipo de input e que cada input soubesse seu type, sem ser necessário criar a pipe InputType que criei para converter o problema de inputs com tipos diferentes. Também seria legal criar validações mais específicas para o formulário.
+## Melhorias para uma feature futura
+Quando comecei a desenvolver o teste, imaginei que a melhor forma de criar um formulário que fosse moldável às necessidades de cada combinação possível de cadastro de cliente fosse criando um Builder. Acho que a abordagem me rendeu economizar em criar diversos inputs na View, mas trouxe alguns pontos que gostaria de ter pensado em soluções melhores, como: máscaras específicas para cada tipo de input e que cada input soubesse seu type, sem ser necessário criar a pipe InputType que criei para converter o problema de inputs com tipos diferentes. Também seria legal criar validações mais específicas para o formulário.
 
 No mais, é isso.
 Obrigada pela oportunidade :D
