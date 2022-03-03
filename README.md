@@ -1,4 +1,4 @@
-# TestePipo
+🙃
 Olá!
 O projeto foi desenvolvido utilizando Angular, TypeScript, SASS e Json Server para mockar requests REST. Como adicional, foi utilizada a lib Angular Material para criar um componente de dropdown.
 
