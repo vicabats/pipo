@@ -21,15 +21,15 @@ Para o login, faça uso de alguma dessas credenciais:
 ##  Organização do banco de dados (JSON Server)
 Utilizei o JSON Server para mockar o server side. Ele cumpre alguns papéis, mas, devido a algumas limitações, não pude organizar os dados da forma como realmente gostaria. Por exemplo, criei dois domínios no arquivo `json.db`: o de `users` (referente à experiência de Login) e o de `registers` (referente à experiência de Registration).
 
+No domínio de `registers`, seria muito mais interessante que existisse uma entidade representando cada cliente (Acme Co e Tio Patinhas Bank, por exemplo), e que cada entidade pudesse ter seus vários funcionários cadastrados. Uma relação de 1: N. Porém, o JSON Server não está preparado para "nested routes", por isso, a solução que encontrei foi colocar a refência do cliente dentro do objeto de registro do usuário.
+
 ## Testes unitários
 O comando `ng test` irá rodar os testes unitários do projeto. Infelizmente, não consegui desenvolver muitos testes devido ao tempo. Gostaria de ter podido cobrido melhor os métodos dos serviços. 
 
 
 ## Extras
-- No domínio de `registers`, seria muito mais interessante que existisse uma entidade representando cada cliente (Acme Co e Tio Patinhas Bank, por exemplo), e que cada entidade pudesse ter seus vários funcionários cadastrados. Uma relação de 1: N. Porém, o JSON Server não está preparado para "nested routes", por isso, a solução que encontrei foi colocar a refência do cliente dentro do objeto de registro do usuário.
-- Quando comecei a desenvolver o teste, imaginei que a melhor forma de criar um formulário que fosse moldável às necessidades de cada combinação possível de cadastro de cliente fosse criando um Builder. Acho que a abordagem me rendeu economizar em criar diversos inputs na View, mas trouxe alguns pontos que gostaria de ter pensado em soluções melhores, como: máscaras específicas para cada tipo de input e que cada input soubesse seu type, sem ser necessário criar a pipe InputType que criei para converter o problema de inputs com tipos diferentes.
+
+- Quando comecei a desenvolver o teste, imaginei que a melhor forma de criar um formulário que fosse moldável às necessidades de cada combinação possível de cadastro de cliente fosse criando um Builder. Acho que a abordagem me rendeu economizar em criar diversos inputs na View, mas trouxe alguns pontos que gostaria de ter pensado em soluções melhores, como: máscaras específicas para cada tipo de input e que cada input soubesse seu type, sem ser necessário criar a pipe InputType que criei para converter o problema de inputs com tipos diferentes. Também seria legal criar validações mais específicas para o formulário.
 
 No mais, é isso.
 Obrigada pela oportunidade :D
-
-
