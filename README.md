@@ -28,7 +28,7 @@ O comando `ng test` irá rodar os testes unitários do projeto. Gostaria de ter 
 
 
 ## Melhorias para uma feature futura
-Quando comecei a desenvolver o teste, imaginei que a melhor forma de criar um formulário que fosse moldável às necessidades de cada combinação possível de cadastro de cliente fosse criando um Builder. Acho que a abordagem me rendeu economizar em criar diversos inputs na View, mas trouxe alguns pontos que gostaria de ter pensado em soluções melhores, como: máscaras específicas para cada tipo de input e que cada input soubesse seu type, sem ser necessário criar a pipe InputType que criei para converter o problema de inputs com tipos diferentes. Também seria legal criar validações mais específicas para o formulário.
+Quando comecei a desenvolver o teste, imaginei que a melhor forma de criar um formulário que fosse moldável às necessidades de cada combinação possível de cadastro de cliente fosse criando um Builder. Acho que a abordagem me garantiu uma economia de não precisar criar diversos inputs na View, mas trouxe alguns pontos que gostaria de ter pensado em soluções melhores, como: máscaras específicas para cada tipo de input e que cada input soubesse seu type, sem ser necessário criar a pipe InputType que criei para converter o problema de inputs com tipos diferentes. Também seria legal criar validações mais específicas para o formulário.
 
 No mais, é isso.
 Obrigada pela oportunidade :D
