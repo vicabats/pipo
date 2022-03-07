@@ -62,5 +62,34 @@
       ],
       "id": 3
     },
+    {
+      "companyId": 1,
+      "employee": {
+        "cpf": "345.456.567-99",
+        "name": "aaa",
+        "admission_date": "2022-03-18",
+        "email": "vitoria_batistoti@hotmail.com"
+      },
+      "plans": [
+        "Norte Europa"
+      ],
+      "id": 4
+    },
+    {
+      "companyId": 1,
+      "employee": {
+        "cpf": "345.567.875-90",
+        "name": "Vitória",
+        "admission_date": "2022-03-19",
+        "email": "teste@gmail.com",
+        "weight": "80",
+        "height": "90"
+      },
+      "plans": [
+        "Norte Europa",
+        "Dental Sorriso"
+      ],
+      "id": 5
+    }
   ]
 }
