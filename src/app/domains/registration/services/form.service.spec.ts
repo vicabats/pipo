@@ -1,7 +1,7 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { PlanName } from '../models/plans';
-import { UserRegistrationRequest } from '../models/registration';
+import { UserRegistrationRequest } from '../models/register';
 
 import { FormService } from './form.service';
 

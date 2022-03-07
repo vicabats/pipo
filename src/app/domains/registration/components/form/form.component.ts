@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/domains/login/models/User';
 import { PlanName } from 'src/app/domains/registration/models/plans';
-import { UserRegistrationRequest } from '../../models/registration';
+import { UserRegistrationRequest } from '../../models/register';
 import { FormService } from '../../services/form.service';
 
 @Component({

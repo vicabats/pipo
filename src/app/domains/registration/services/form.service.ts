@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { planInitializer, PlanName } from '../models/plans';
-import { UserRegistrationRequest } from '../models/registration';
+import { UserRegistrationRequest } from '../models/register';
 
 @Injectable({
   providedIn: 'root'
